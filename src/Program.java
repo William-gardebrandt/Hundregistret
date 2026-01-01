@@ -14,6 +14,7 @@ public class Program {
 
         System.out.println(sui.getOwner());
         System.out.println(dui.getOwner());
+        System.out.print(sui.toString());
         
 
 

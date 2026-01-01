@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Dog {
 
-    //Attributenx
+    //Attributer
     private String name;
     private String breed;
     private int age;
@@ -46,10 +46,8 @@ public Owner getOwner(){
 }
 
 //För att denna metod ska kunna fungera måste datan som skickas in i metoden redans finnas som ett objekt av klassen Owner.
-public Owner setOwner(Owner newOwner){
+public void setOwner(Owner newOwner){
     owner = newOwner;
-    return owner;
-
 }
 
 
@@ -66,20 +64,25 @@ public double getTailLength(){
 }
 
 //UPPDATTERA ÅLDER
-public int increaseAgeOfDog(){
-        Scanner input = new Scanner (System.in);
-        System.out.print("Years to add: ");
-        int newYears = input.nextInt();
-        return age = age + newYears;
+public void increaseAgeOfDog() {
+        age += 1;
+    if(age == Integer.MAX_VALUE + 1){
+        age = Integer.MAX_VALUE;
+    }
+
+
+
 }
 
 public String toString(){
     return 
-    "Dog:" + "\n" + 
-    name.toString() + "\n" +
-    breed.toString() + "\n" + 
-    age + "\n" + 
-    weight;
+    "Dog" + "\n-------" + "\nName: " +
+    name.toString() + "\nBreed: " +
+    breed.toString() + "\nAge: " +
+    age + "\nWeight: " +
+    weight + "\nOwner: " +
+            owner;
+
 }
 
 }
